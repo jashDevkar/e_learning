@@ -9,7 +9,7 @@ class Header extends StatelessWidget {
     return Column(
       children: <Widget>[
         Expanded(
-          child: Container(
+          child:  Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(50.0)),
               color: Constants.salmonMain,

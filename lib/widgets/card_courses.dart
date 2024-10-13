@@ -1,3 +1,4 @@
+import 'package:e_learning/screens/video_screen.dart';
 import 'package:e_learning/utils/const.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class CardCourses extends StatelessWidget {
   final String progress;
   final double percentage;
   final Color color;
+  final String navigatorString;
 
   CardCourses({
     Key? key,
@@ -19,6 +21,7 @@ class CardCourses extends StatelessWidget {
     required this.percentage,
     required this.progress,
     required this.color,
+    required this.navigatorString,
   }) : super(key: key);
 
   @override
@@ -74,15 +77,21 @@ class CardCourses extends StatelessWidget {
                     color: Colors.white,
                     shape: BoxShape.circle
                 ),
-                child: CircularPercentIndicator(
-                  backgroundColor: Colors.white,
-                  radius: 43.0,
-                  lineWidth: 2.0,
-                  animation: true,
-                  percent: percentage,
-                  center: Icon(Icons.play_arrow, color: Color(0xFFF18C8E)),
-                  circularStrokeCap: CircularStrokeCap.round,
-                  progressColor: Color(0xFFF18C8E),
+                child: TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>VideoScreen(routeName: navigatorString)));
+                  },
+                  child: CircularPercentIndicator(
+                    backgroundColor: Colors.white,
+                    radius: 43.0,
+                    lineWidth: 2.0,
+                    animation: true,
+                    percent: percentage,
+                    center: Icon(Icons.play_arrow, color: Color(0xFFF18C8E)),
+                    circularStrokeCap: CircularStrokeCap.round,
+                    progressColor: Color(0xFFF18C8E),
+
+                  ),
                 ),
               )
 

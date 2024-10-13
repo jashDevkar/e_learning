@@ -221,6 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     CardCourses(
                       image: Image.asset("assets/images/icon_1.png", width: 40, height: 40),
                       color: Constants.lightPink,
+                      navigatorString: 'Adobe',
                       title: "Adobe XD Prototyping",
                       hours: "10 hours, 19 lessons",
                       progress: "25%",
@@ -229,6 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     CardCourses(
                       image: Image.asset("assets/images/icon_2.png", width: 40, height: 40),
                       color: Constants.lightYellow,
+                      navigatorString: 'Sketch',
                       title: "Sketch shortcuts and tricks",
                       hours: "10 hours, 19 lessons",
                       progress: "50%",
@@ -237,6 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     CardCourses(
                       image: Image.asset("assets/images/icon_3.png", width: 40, height: 40),
                       color: Constants.lightViolet,
+                      navigatorString: 'UI',
                       title: "UI Motion Design in After Effects",
                       hours: "10 hours, 19 lessons",
                       progress: "75%",
